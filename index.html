@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Counter App</title>
+</head>
+<body>
+  <h1 id="counter">0</h1>
+  <button id="increment">Increment</button>
+  <button id="decrement">Decrement</button>
+
+  <script>
+    const counter = document.getElementById("counter");
+    document.getElementById("increment").onclick = () => {
+      counter.innerText = parseInt(counter.innerText) + 1;
+    };
+    document.getElementById("decrement").onclick = () => {
+      let value = parseInt(counter.innerText);
+      if (value > 0) {
+        counter.innerText = value - 1;
+      }
+    };
+  </script>
+</body>
+</html>
